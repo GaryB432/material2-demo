@@ -1,0 +1,72 @@
+<md-sidenav-container class="demo-sidenav-container">
+  <md-sidenav #start (open)="myinput.focus()" mode="side">
+    Start Side Drawer
+    <br>
+    <button md-button (click)="start.close()">Close</button>
+    <br>
+    <button md-button (click)="end.open()">Open End Side</button>
+    <br>
+    <button md-button (click)="start.mode = (start.mode == 'push' ? 'over' : (start.mode == 'over' ? 'side' : 'push'))">Toggle Mode</button>
+    <div>Mode: {{start.mode}}</div>
+    <br>
+    <input #myinput>
+  </md-sidenav>
+
+  <md-sidenav #end align="end">
+    End Side Drawer
+    <br>
+    <button md-button (click)="end.close()">Close</button>
+  </md-sidenav>
+
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="start.toggle()"><i class="material-icons app-toolbar-menu">menu</i></button>
+    <!--    
+    <md-icon class="demo-toolbar-icon">menu</md-icon>
+    -->
+
+    <span>Angular Material2 Starter App</span>
+    <!--
+      <p>
+      <md-checkbox (change)="isVertical = $event.checked">Show Button Toggles Vertical</md-checkbox>
+    </p>
+
+    <p>
+      <md-checkbox (change)="isDisabled = $event.checked">Disable Button Toggle Items</md-checkbox>
+    </p>
+-->
+
+    <!--
+    <a md-tab-link
+     *ngFor="let tabLink of navItems; let i = index"
+      [routerLink]="tabLink.link" 
+      routerLinkActive #rla="routerLinkActive"
+      [active]="rlaSafe && rla.isActive"> {{tabLink.label}}
+       </a>
+-->
+
+    <a [routerLinkActive]="['active']" [routerLink]="['']" md-button>Home</a>
+    <a [routerLinkActive]="['active']" [routerLink]="['about']" md-button>About</a>
+
+    <span class="app-toolbar-filler"></span>
+
+    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+  </md-toolbar>
+
+  <router-outlet></router-outlet>
+
+  <md-card>
+    <md-card-title>Sidenav</md-card-title>
+    <md-card-actions>
+      <button md-button (click)="start.toggle()">Toggle Start Side Drawer</button>
+      <button md-button (click)="end.toggle()">Toggle End Side Drawer</button>
+    </md-card-actions>
+  </md-card>
+
+</md-sidenav-container>
+
+<!--
+<span class="app-action" [class.m2app-dark]="isDarkTheme">
+  <button md-fab><md-icon>check circle</md-icon></button>
+</span>
+-->
