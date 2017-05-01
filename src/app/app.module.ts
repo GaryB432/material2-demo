@@ -13,6 +13,7 @@ import {
   MdSidenavModule,
   MdSnackBarModule,
   MdToolbarModule,
+  MdTooltipModule,
 } from "@angular/material";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -51,6 +52,7 @@ type NativeElement = any;
     MdSidenavModule,
     MdSnackBarModule,
     MdToolbarModule,
+    MdTooltipModule,
     ReactiveFormsModule,
     HttpModule,
     FormsModule,
