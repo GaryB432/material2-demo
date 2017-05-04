@@ -17,3 +17,30 @@
   <md-radio-button name="symbol">Beta</md-radio-button>
   <md-radio-button name="symbol" disabled>Gamma</md-radio-button>
 </md-card>
+
+<md-card>
+  <md-input-container>
+    <input mdInput placeholder="First name">
+  </md-input-container>
+
+  <md-input-container>
+    <input mdInput #nickname placeholder="Nickname" maxlength="50">
+    <md-hint align="end">
+      <md-icon mdPrefix>mode_edit</md-icon>
+      {{nickname.value.length}} / 50
+    </md-hint>
+  </md-input-container>
+
+  <md-input-container>
+    <input mdInput>
+    <md-placeholder>
+      <md-icon mdPrefix>android</md-icon> Favorite phone
+    </md-placeholder>
+  </md-input-container>
+
+  <md-input-container>
+    <md-icon mdPrefix>motorcycle</md-icon>
+    <input mdInput placeholder="Motorcyle model">
+  </md-input-container>
+
+</md-card>
