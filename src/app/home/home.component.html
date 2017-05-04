@@ -44,3 +44,17 @@
   </md-input-container>
 
 </md-card>
+
+<md-card>
+  <md-list>
+    <md-list-item *ngFor="let food of foods">
+      <h3 md-line>{{food.name}}</h3>
+      <p md-line>{{food.rating}}</p>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<md-card>
+  <md-spinner class="amd-spinner"></md-spinner>
+  <md-spinner color="accent" class="amd-spinner"></md-spinner>
+</md-card>
