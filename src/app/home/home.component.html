@@ -58,3 +58,11 @@
   <md-spinner class="amd-spinner"></md-spinner>
   <md-spinner color="accent" class="amd-spinner"></md-spinner>
 </md-card>
+
+<md-card>
+  Indeterminate progress-bar
+  <md-progress-bar class="app-progress" mode="indeterminate" aria-label="Indeterminate progress-bar example"></md-progress-bar>
+
+  Determinate progress bar - {{progress}}%
+  <md-progress-bar class="app-progress" color="accent" mode="determinate" [value]="progress" aria-label="Determinate progress-bar example"></md-progress-bar>
+</md-card>
