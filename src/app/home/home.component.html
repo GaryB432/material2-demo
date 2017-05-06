@@ -66,3 +66,30 @@
   Determinate progress bar - {{progress}}%
   <md-progress-bar class="app-progress" color="accent" mode="determinate" [value]="progress" aria-label="Determinate progress-bar example"></md-progress-bar>
 </md-card>
+
+<md-card>
+  <md-tab-group>
+    <md-tab label="Earth">
+      <div>
+        This tab is about the Earth!
+      </div>
+    </md-tab>
+    <md-tab label="Fire">
+      This tab is about combustion!
+    </md-tab>
+  </md-tab-group>
+</md-card>
+
+<md-card>
+  <md-icon>build</md-icon>
+</md-card>
+
+<md-card>
+  <button md-button [md-menu-trigger-for]="menu">MENU</button>
+</md-card>
+
+<md-menu #menu="mdMenu">
+  <button md-menu-item>Lemon</button>
+  <button md-menu-item>Lime</button>
+  <button md-menu-item>Banana</button>
+</md-menu>

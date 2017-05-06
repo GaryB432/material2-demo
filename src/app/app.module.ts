@@ -15,6 +15,7 @@ import {
   MdRadioModule,
   MdSidenavModule,
   MdSnackBarModule,
+  MdTabsModule,
   MdToolbarModule,
   MdTooltipModule,
 } from "@angular/material";
@@ -57,6 +58,7 @@ type NativeElement = any;
     MdRadioModule,
     MdSidenavModule,
     MdSnackBarModule,
+    MdTabsModule,
     MdToolbarModule,
     MdTooltipModule,
     ReactiveFormsModule,
